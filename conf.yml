@@ -1,0 +1,313 @@
+common:
+  app_install_path: "/data/service"
+  app_backup_path: "/data/backup"
+
+hosts:
+  user: sobot
+  port: 22
+  ips:
+    - 192.168.1.16
+    - 192.168.1.7
+    - 192.168.1.8
+    - 192.168.1.3
+    - 192.168.1.2
+redis:
+  ip: app04
+  port: 6379
+  pass: SobotRedisLO$@V6
+
+mysql:
+  ip: app04
+  port: 3306
+  user: sobot
+  pass: SobotMysqlSz@$0C
+
+apps:
+  - name: basic-config-service
+    nodes: ['inner-web']
+  - name: basic-customer
+    nodes: ['inner-web']
+  - name: basic-login
+    nodes: ['inner-web']
+  - name: basic-message
+    nodes: ['inner-web']
+  - name: basic-monitor
+    nodes: ['inner-web']
+  - name: basic-pass
+    nodes: ['inner-web']
+  - name: basic-set
+    nodes: ['inner-web']
+  - name: customer-open
+    nodes: ['inner-web']
+  - name: set-open
+    nodes: ['inner-web']
+  - name: boss-admin
+    nodes: ['inner-web']
+  - name: boss-service
+    nodes: ['inner-web']
+  - name: customer-base
+    nodes: ['inner-web']
+  - name: job-service
+    nodes: ['inner-web']
+  - name: open-service
+    nodes: ['inner-web']
+  - name: set-base6
+    nodes: ['inner-web']
+  - name: message-base
+    nodes: ['inner-web']
+  - name: qcs-base
+    nodes: ['inner-web']
+  - name: qcs-common
+    nodes: ['inner-web']
+  - name: kb-service
+    nodes: ['inner-web']
+  - name: kb-job
+    nodes: ['inner-web']
+  - name: robot-service
+    nodes: ['inner-web']
+  - name: robot-modeling
+    nodes: ['inner-web']
+  - name: robot-base
+    nodes: ['inner-web']
+  - name: robot-base-prv
+    nodes: ['inner-web']
+  - name: robot-base-suggest
+    nodes: ['inner-web']
+  - name: robot-base-word
+    nodes: ['inner-web']
+  - name: robot-base-learn
+    nodes: ['inner-web']
+  - name: robot-work-index
+    nodes: ['inner-web']
+  - name: robot-work-suggest
+    nodes: ['inner-web']
+  - name: robot-knowledge-optimize
+    nodes: ['inner-web']
+  - name: robot-inspection-index
+    nodes: ['inner-web']
+  - name: ws-base-es6
+    nodes: ['192.168.1.8']
+  - name: ws-service
+    nodes: ['192.168.1.8']
+  - name: ws-open
+    nodes: ['192.168.1.8']
+  - name: ws-report
+    nodes: ['192.168.1.8']
+  - name: ws-tenant
+    nodes: ['192.168.1.8']
+  - name: ws-job
+    nodes: ['192.168.1.8']
+  - name: chat-data
+    nodes: ['192.168.1.7']
+  - name: chat-inner-im
+    nodes: ['192.168.1.7']
+  - name: chat-inner-im-consumer
+    nodes: ['192.168.1.7']
+  - name: chat-input
+    nodes: ['192.168.1.7']
+  - name: chat-job
+    nodes: ['192.168.1.7']
+  - name: chat-job-new
+    nodes: ['192.168.1.7']
+  - name: chat-kwb
+    nodes: ['192.168.1.7']
+  - name: chat-msg
+    nodes: ['192.168.1.7']
+  - name: chat-reply
+    nodes: ['192.168.1.7']
+  - name: chat-reply-consumer
+    nodes: ['192.168.1.7']
+  - name: chat-report
+    nodes: ['192.168.1.7']
+  - name: chat-report-base
+    nodes: ['192.168.1.7']
+  - name: chat-sdk
+    nodes: ['192.168.1.7']
+  - name: chat-set
+    nodes: ['192.168.1.7']
+  - name: chat-third
+    nodes: ['192.168.1.7']
+  - name: chat-visit
+    nodes: ['192.168.1.7']
+  - name: chat-wb
+    nodes: ['192.168.1.7']
+  - name: chat-web
+    nodes: ['192.168.1.7']
+  - name: chat-wx
+    nodes: ['192.168.1.7']
+  - name: tenant-service
+    nodes: ['192.168.1.7']
+  - name: qcs-chat
+    nodes: ['192.168.1.7']
+  - name: basic-public
+    nodes: ['192.168.1.8']
+  - name: basic-system
+    nodes: ['192.168.1.8']
+  - name: boss-base3
+    nodes: ['192.168.1.8']
+  - name: boss-service3
+    nodes: ['192.168.1.8']
+  - name: boss-web3
+    nodes: ['192.168.1.8']
+  - name: gateway
+    nodes: ['192.168.1.8']
+  - name: crm-base
+    nodes: ['192.168.1.8']
+  - name: crm-channel-qywx
+    nodes: ['192.168.1.8']
+  - name: crm-job
+    nodes: ['192.168.1.8']
+  - name: crm-open
+    nodes: ['192.168.1.8']
+  - name: crm-report
+    nodes: ['192.168.1.8']
+  - name: crm-user-service
+    nodes: ['192.168.1.8']
+  - name: qywx-base
+    nodes: ['192.168.1.8']
+  - name: qywx-callback
+    nodes: ['192.168.1.8']
+  - name: qywx-job
+    nodes: ['192.168.1.8']
+  - name: qywx-report
+    nodes: ['192.168.1.8']
+  - name: qywx-service
+    nodes: ['192.168.1.8']
+  - name: call-basic
+    nodes: ['192.168.1.3']
+  - name: call-bill
+    nodes: ['192.168.1.3']
+  - name: call-data
+    nodes: ['192.168.1.3']
+  - name: call-data-base
+    nodes: ['192.168.1.3']
+  - name: call-ivr
+    nodes: ['192.168.1.3']
+  - name: call-job
+    nodes: ['192.168.1.3']
+  - name: call-open
+    nodes: ['192.168.1.3']
+  - name: call-report
+    nodes: ['192.168.1.3']
+  - name: comm-admin
+    nodes: ['192.168.1.3']
+  - name: comm-cti-core
+    nodes: ['192.168.1.7']
+  - name: comm-cti-message
+    nodes: ['192.168.1.3']
+  - name: cti-asr
+    nodes: ['192.168.1.3']
+  - name: cti-backend
+    nodes: ['192.168.1.3']
+  - name: cti-cache
+    nodes: ['192.168.1.3']
+  - name: cti-config
+    nodes: ['192.168.1.3']
+  - name: cti-data
+    nodes: ['192.168.1.3']
+  - name: cti-new-websocket
+    nodes: ['192.168.1.3']
+  - name: cti-outbound
+    nodes: ['192.168.1.3']
+  - name: cti-service
+    nodes: ['192.168.1.7']
+  - name: cti-websocket
+    nodes: ['192.168.1.3']
+  - name: cti-web-tts
+    nodes: ['192.168.1.3']
+  - name: cti-web-asr
+    nodes: ['192.168.1.3']
+  - name: cti-xnumber
+    nodes: ['192.168.1.3']
+  - name: qcs-call
+    nodes: ['192.168.1.3']
+  - name: tms-data
+    nodes: ['192.168.1.3']
+  - name: tms-main
+    nodes: ['192.168.1.3']
+  - name: icall-admin
+    nodes: ['192.168.1.2']
+  - name: icall-base
+    nodes: ['192.168.1.2']
+  - name: icall-data
+    nodes: ['192.168.1.2']
+  - name: icall-import
+    nodes: ['192.168.1.2']
+  - name: icall-job
+    nodes: ['192.168.1.2']
+  - name: icall-link
+    nodes: ['192.168.1.2']
+  - name: icall-monitor
+    nodes: ['192.168.1.2']
+  - name: icall-open
+    nodes: ['192.168.1.2']
+  - name: icall-service
+    nodes: ['192.168.1.2']
+  - name: link-service
+    nodes: ['192.168.1.2']
+  - name: link-translate
+    nodes: ['192.168.1.2']
+  - name: link-fs
+    nodes: ['192.168.1.7']
+  - name: sobot-cloud-inspection-main
+    nodes: ['192.168.1.2']
+  - name: sobot-cloud-inspection-open
+    nodes: ['192.168.1.2']
+  - name: sobot-cloud-inspection-job
+    nodes: ['192.168.1.2']
+  - name: sobot-cloud-eureka
+    nodes: ['192.168.1.2']
+  - name: sobot-cloud-zuul
+    nodes: ['192.168.1.2']
+  - name: data-base-es6
+    nodes: ['192.168.1.8']
+  - name: chat-analysis
+    nodes: ['192.168.1.3']
+  - name: chat-offline-analysis
+    nodes: ['192.168.1.3']
+  - name: chat-realtime-monitor
+    nodes: ['192.168.1.2']
+  - name: offlineJobProcess-es6
+    nodes: ['192.168.1.2']
+  - name: call-realtime-analysis
+    nodes: ['192.168.1.8']
+  - name: ivr-call-analysis
+    nodes: ['192.168.1.2']
+  - name: agent
+    nodes: ['inner-web']
+  - name: call
+    nodes: ['inner-web']
+  - name: callcenter
+    nodes: ['inner-web']
+  - name: dashboard
+    nodes: ['inner-web']
+  - name: framev2
+    nodes: ['inner-web']
+  - name: h5v2
+    nodes: ['inner-web']
+  - name: inner_business
+    nodes: ['inner-web']
+  - name: platformpro
+    nodes: ['inner-web']
+  - name: robotsupportpro
+    nodes: ['inner-web']
+  - name: scrm_minipro
+    nodes: ['inner-web']
+  - name: wechatbar
+    nodes: ['inner-web']
+  - name: am
+    nodes: ['inner-web']
+  - name: hm
+    nodes: ['inner-web']
+  - name: kbm
+    nodes: ['inner-web']
+  - name: login
+    nodes: ['inner-web']
+  - name: scrm
+    nodes: ['inner-web']
+  - name: taskm
+    nodes: ['inner-web']
+  - name: wxm
+    nodes: ['inner-web']
+
+
